@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html style="background: #2c698d">
+    <head>
+        <title>Home - Finance Manager</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="css/designHome.css"
+            media="screen"
+        />
+        <link rel="icon" type="image/x-icon" href="imgs/icon.png" />
+    </head>
+    <body>
+        <div class="main-rectangle-left">
+            <div class="titleDiv" onclick="home()">
+                <img src="imgs/icon.png" width="50px" />
+                &nbsp;FINANCE MANAGER
+            </div>
+            <div class="rounded-rectangle">
+                <div class="category-title-bar" onclick="setCategoryBudget()">
+                    <div
+                        id="category-title-text"
+                        class="category-title-text"
+                    ></div>
+                    <div
+                        id="category-title-budget"
+                        class="category-title-budget"
+                    ></div>
+                    <div
+                        id="category-title-total"
+                        class="category-title-total"
+                    ></div>
+                </div>
+                <button class="add-button" type="button" onclick="addItem()">
+                    +
+                </button>
+                <div id="scrollDiv" class="scrollable-div"></div>
+            </div>
+        </div>
+        <div class="main-rectangle-right">
+            <div class="notification" onclick="notify()">
+                <img src="imgs/bell.png" height="40px" />
+            </div>
+            <div class="profile" onclick="profile()">
+                <img src="imgs/profile.png" height="40px" />
+            </div>
+            <div id="wallet-div">
+                <div class="headline-text">Wallet</div>
+                <div class="wallet-bar" onclick="setTotalBudget()">
+                    <center>
+                        <table id="wallet">
+                            <tr>
+                                <th
+                                    style="
+                                        height: 0px;
+                                        padding: 0%;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 35%;
+                                    "
+                                ></th>
+                                <th
+                                    style="
+                                        height: 0px;
+                                        padding: 0%;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 35%;
+                                    "
+                                ></th>
+                            </tr>
+                            <tr id="budget">
+                                <th class="budget" colspan="2">Budget</th>
+                                <th class="budget" id="budget-val"></th>
+                                <!-- ^ Placeholder -->
+                            </tr>
+                            <tr id="allocated">
+                                <th colspan="2">Budget Allocated</th>
+                                <th id="alloc-val"></th>
+                                <!-- ^ Placeholder -->
+                            </tr>
+                            <tr id="total">
+                                <th><b>Total</b></th>
+                                <th id="total-val" colspan="2"></th>
+                                <!-- ^ Placeholder -->
+                            </tr>
+                        </table>
+                    </center>
+                </div>
+            </div>
+            <div class="category-div">
+                <div class="headline-text">Categories</div>
+                <div class="category-bar" onclick="setCategory(0)">
+                    <div class="flexbox">
+                        <img src="imgs/essentials.png" width="30px" />
+                    </div>
+                    <table>
+                        <tr>
+                            <th class="category-text" colspan="2">
+                                Essentials
+                            </th>
+                        </tr>
+                        <tr>
+                            <th
+                                id="essentials-budget"
+                                class="category-budget"
+                            ></th>
+                            <th
+                                id="essentials-total"
+                                class="category-total"
+                            ></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="category-bar" onclick="setCategory(1)">
+                    <div class="flexbox">
+                        <img src="imgs/transportation.png" width="30px" />
+                    </div>
+                    <table>
+                        <tr>
+                            <th class="category-text" colspan="2">
+                                Transportation
+                            </th>
+                        </tr>
+                        <tr>
+                            <th
+                                id="transportation-budget"
+                                class="category-budget"
+                            ></th>
+                            <th
+                                id="transportation-total"
+                                class="category-total"
+                            ></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="category-bar" onclick="setCategory(2)">
+                    <div class="flexbox">
+                        <img src="imgs/savings.png" width="30px" />
+                    </div>
+                    <table>
+                        <tr>
+                            <th class="category-text" colspan="2">Savings</th>
+                        </tr>
+                        <tr>
+                            <th
+                                id="savings-budget"
+                                class="category-budget"
+                            ></th>
+                            <th id="savings-total" class="category-total"></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="category-bar" onclick="setCategory(3)">
+                    <div class="flexbox">
+                        <img src="imgs/miscellaneous.png" width="30px" />
+                    </div>
+                    <table>
+                        <tr>
+                            <th class="category-text" colspan="2">
+                                Miscellaneous
+                            </th>
+                        </tr>
+                        <tr>
+                            <th
+                                id="miscellaneous-budget"
+                                class="category-budget"
+                            ></th>
+                            <th
+                                id="miscellaneous-total"
+                                class="category-total"
+                            ></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="category-bar" onclick="setCategory(4)">
+                    <div class="flexbox">
+                        <img src="imgs/bills.png" width="30px" />
+                    </div>
+                    <table>
+                        <tr>
+                            <th class="category-text" colspan="2">Bills</th>
+                        </tr>
+                        <tr>
+                            <th id="bills-budget" class="category-budget"></th>
+                            <th id="bills-total" class="category-total"></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="js/mainscripts.js"></script>
+    </body>
+</html>
